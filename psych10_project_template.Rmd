@@ -1,0 +1,192 @@
+---
+title: "Psych 10 Project"
+author: 
+---
+
+NOTE: Submit this file as a .Rmd file on Canvas. 
+
+
+# Part 1
+
+The goals of Part 1 of your project are to:
+
+* Identify your question and explain why you are asking it
+* Identify, briefly describe, and read in your dataset to R
+* Identify and describe the variables you will use to test your hypothesis.
+* Identify how you will need to clean/wrangle your dataset.
+* Identify limitations of your project as a whole. 
+
+## Environment set up 
+
+__q1__ Set up your environment by loading the needed packages and saving the file path(s) to your data as values in your environment.
+```{r}
+#Libaries
+
+```
+
+## Project question
+
+__q2__ What question will you answer in your project? 
+
+
+
+__q3__ Motivation: Why is this question interesting and/or important to ask? Ground your explanation in fact. Provide at least one example of how answering this question may be useful in the "real" world. 
+
+
+__q4__ Phrase your question in terms of a testable hypothesis. 
+
+_Example from the Stanford Open Policing Project (https://openpolicing.stanford.edu/)_: _Black individuals are more likely to be searched when stopped by the police than are white individuals_
+
+
+## The dataset
+
+__q5__ What e dataset will you use for your project? Provide a brief description of this dataset (e.g., who collected it and when, what data does it contain, why was it collected, how were the data collected). 
+
+
+__q6__ Save your dataset from the R package to your environment.
+
+```{r}
+bach_data <- bachelorette
+```
+
+__q8__  Use the glimpse() function take a look at your dataset. How many observations are in your dataset and how many variables? 
+```{r}
+
+```
+
+__q9__ Which variables will use to to examine your question? Describe what they are. Include what types of variables they are (e.g., character, integer, etc.) and what their scales of measurement are. 
+
+
+## Data challenges
+
+__q10__ What will you do to clean and wrangle your dataset to make it appropriate for analysis? For example, will you remove certain columns or rows? Do you need to rename or recode variables? Do you need to create new variables? 
+
+
+## Project limitations
+
+__q11__ Describe at least two limitations of your data that may make it challenging to draw particular conclusions or interpret your findings (e.g., consider who is in the sample and the design of the study)?
+
+
+## Part 1: Team member contributions
+
+Please explain how each of your team members (by name) contributed to Part 1 of your project. 
+
+
+
+
+
+____________________________________________________________________________________________
+
+# Part 2
+
+The goals of Part 2 of your project are to:
+
+* Clean and wrangle your data and describe this process. 
+* Visualize and summarize each of your variables and interpret what you see.  
+
+
+# Data cleaning and wrangling
+
+__q12__ In Part 1, you described the necessary data cleaning and wrangling you would need to do to make your data appropriate for analysis (__q10__). Perform this data cleaning below, as well as any additional cleaning/wrangling you need to do. For each data cleaning step, insert a separate chunk of code. For each step, explain why you are doing it in the whitespace below the chunk
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+
+# Data visualization and summary 
+
+__q13__ Use `ggplot()` to create histograms (`geom_histogram` or `geom_col`) showing the distributions of each of the variables you are using to test your hypothesis. Only plot one variable per chunk of code. At the end, describe the distribution of each variable in terms of whether it is normal, skewed, bimodal, etc. 
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+
+__q14__ Summarize each of the numeric variables you will use to test your hypothesis with the central tendency and standard deviation. For categorical/character variables, summarize with the frequency in each category 
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+
+## Part 2: Team member contributions
+
+Please explain how each of your team members (by name) contributed to Part 1 of your project. 
+
+
+
+____________________________________________________________________________________________
+
+
+
+# Part 3
+
+The goals of Part 3 of your project are to:
+
+* Test your hypothesis using the appropriate statistical tests. 
+*	Estimate how large the effect is by using one of the following: effect size, confidence intervals, Bayes factors
+*	Visualize your results, including one figure that summarizes your primary result. 
+*	Interpret your results in writing.
+
+
+## Hypothesis testing
+
+In Milestone 1, you identified your hypothesis for your project question. Please restate your hypothesis below (it's okay if it changed _prior_ to hypothesis testing):
+
+
+
+
+__q15__ What is the null hypothesis?
+
+_Example from Stanford Open Policing Project_: _Black and White individuals are equally likely to be searched when stopped by the police. In other words, race and being searched are independent of each other_
+
+
+
+__q16__ Test your hypothesis using the appropriate statistical tests. Points to consider: Are your variables continuous or categorical? If your variables are continuous, are they normally distributed? If one or more of your variables is categorical, how many categories are there?
+
+```{r}
+
+```
+
+__q17__ In writing, interpret the results of your hypothesis test(s). Move beyond the p-value and where the test is "significant". For example, if you compared means, describe the size of the means in relation to each other; if you use a chi-square test, create a contingency table and describe the relative proportions; if you used regression, interpret the meaning of the intercept and slope(s). Overall, demonstrate that you understand what the test is estimating. 
+
+_Example_: _Using a chi-square test, we tested the hypothesis that Black individuals are more likely to be searched when stopped by the police than are white individuals. Specifically, the chi-square test compared the observed proportions of Black and White individuals who were and were not searched to the proportions expected under the null hypothesis that race and being searched are independent. Results of the chi-square test indicated that the data were unlikely under the null hypothesis, X2(df = 1) = 828.3, p < .001. Specifically, White individuals were searched less than expected under the null hypothesis whereas Black individuals were searched more often than expected under the null hypothesis.Therefore, we can reject the null hypothesis that Black and White individuals are equally likely to be searched when stopped by the police._ 
+
+# Effect size 
+
+__q18__ Estimate how large the effect(s) are. Regardless of whether your hypothesis test was "significant", quantify the size of the effect using measure of effect sizes (e.g., odds ratio or standardized residual for chi-square test; strength of the correlation coefficient; standardized mean difference [cohen's d] for comparing means; standardized beta and/or R-squared for linear regression), confidence intervals, and/or Bayes factors. Interpret the the effect size in writing. 
+
+```{r}
+
+```
+
+_Example_: _We computed the odds-ratio for the probability of Black individuals being searched by the police versus the probability of White individuals being searched by the police. Black individuals were 2.59 times more likely to be searched by the police than were White individuals._
+
+__q19__ 
+
+Use `ggplot()` to visualize your results. Include at least one plot that graphically depicts the primary result of your hypothesis test. Show the variability in the data: if you have a categorical variable, use a boxplot or violin plot; if you have continuous variables, show both the scatter plot (geom_point) and the appropriate trendline. 
+
+Make your primary plot "presentation quality": 1) Provide a title that describes the main take-away of the plot (i.e., Black individuals are disproportionately searched by the police _NOT_ Proportions of Black and White individual searched by the police), 2) Label your axes, 3) Adjust the axis text if necessary by changing the "breaks" using one of the scale_ functions (e.g., scale_x_continuous, scale_x_discrete), 4) if one of your variables is categorical, order the data logically using fct_reorder(), 5) Consider adding reference lines using geom_vline or geom_hline. 
+
+```{r}
+
+```
+
+
+__Team member contributions__ Briefly describe each member's contribution below. 
+
+
+
